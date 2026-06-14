@@ -11,7 +11,7 @@
 // @grant        GM_registerMenuCommand
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     // 默认配置
@@ -251,7 +251,7 @@
 
         // 添加TamperMonkey菜单命令
         try {
-            GM_registerMenuCommand('⚙️ 快捷键设置', toggleSettingsPanel);
+            GM_registerMenuCommand('⚙️ 管理', toggleSettingsPanel);
         } catch (e) {
             console.log('BilibiliHotkeyManager: 菜单命令注册失败');
         }
@@ -539,7 +539,7 @@
                 border-radius: 50%;
             }
             .bhk-switch input:checked + .bhk-slider {
-                background-color: #f44336;
+                background-color: #9e9e9e;
             }
             .bhk-switch input:checked + .bhk-slider:before {
                 transform: translateX(20px);
