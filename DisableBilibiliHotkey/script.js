@@ -258,51 +258,8 @@
 
         // 创建设置面板
         createSettingsPanel();
-
-        // 创建浮动按钮
-        createFloatingButton();
     }
 
-    // 创建浮动按钮
-    function createFloatingButton() {
-        // 检查是否已存在
-        if (document.getElementById('bhk-float-btn')) return;
-
-        const btn = document.createElement('div');
-        btn.id = 'bhk-float-btn';
-        btn.innerHTML = '⌨️';
-        btn.title = 'Bilibili快捷键管理';
-
-        const style = document.createElement('style');
-        style.textContent = `
-            #bhk-float-btn {
-                position: fixed;
-                right: 20px;
-                bottom: 100px;
-                width: 44px;
-                height: 44px;
-                background: #00a1d6;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                z-index: 99999;
-                font-size: 20px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-                transition: transform 0.2s, box-shadow 0.2s;
-                user-select: none;
-            }
-            #bhk-float-btn:hover {
-                transform: scale(1.1);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            }
-        `;
-        document.head.appendChild(style);
-        document.body.appendChild(btn);
-
-        btn.addEventListener('click', toggleSettingsPanel);
-    }
 
     // 创建设置面板
     function createSettingsPanel() {
