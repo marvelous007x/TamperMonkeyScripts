@@ -9,6 +9,7 @@
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
+// @noframes
 // ==/UserScript==
 
 (function () {
